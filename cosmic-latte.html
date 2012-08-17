@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>{Title}</title>
+	<link rel="icon" type="image/png" href="{Favicon}">
+	<link rel="alternate" type="application/rss+xml" href="{RSS}">
+	
+	
+	<meta name="font:Body" content="Century Gothic" />
+	
+	<meta name="color:Text" content="#000000" />
+	<meta name="color:color1" content="#c1524f" />
+	<meta name="color:color2" content="#a03536" />
+	<meta name="color:color3" content="#FFE6E6" />
+	
+	<meta name="image:Background" content="http://i.imgur.com/xAGCy.png" />
+	
+	<meta name="text:URL1" content="/about" />
+	<meta name="text:URL1text" content="about" />
+	<meta name="text:URL2" content="/tagged/me" />
+	<meta name="text:URL2text" content="face" />
+	<meta name="text:URL3" content="/tagged/art" />
+	<meta name="text:URL3text" content="art" />
+	<meta name="text:URL4" content="/ask" />
+	<meta name="text:URL4text" content="ask" />
+	<meta name="text:URL5" content="/friend" />
+	<meta name="text:URL5text" content="moirail" />
+	
+	<meta name="text:leftMargin" content="20%" />
+	
+	<style type="text/css">
+
+		body,td,th {
+			font-family: {font:Body};
+			background: {color:color1};
+			background-image: url('{image:Background}');
+			background-repeat: repeat;
+			margin: 0px;
+			color: {color:Text};
+		}
+		
+		h1 {
+			text-align: left;
+			color: #FFFFFF;
+			text-shadow: 2px 2px 0px {color:color2}, 3px 3px 0px {color:color2};
+			letter-spacing:2px;
+			margin-left: 315px;
+		}
+		
+		h2 {
+			text-align: center;
+			font-weight: normal;
+		}
+		
+		A {
+			color: {color:color2};
+			text-decoration: none;
+		}
+		
+		A:hover {
+			color: {color:color1};
+		}
+		
+		A.title {
+			color: #FFFFFF;
+			text-decoration: none;
+		}
+		
+		A.title:hover {
+			color: {color:color3};
+		}
+		
+		A.backNav {
+			padding: 5px;
+			color: #FFFFFF;
+			background-color: {color:color2};
+			float: left;
+		}
+		
+		A.backNav:hover {
+			color: {color:color3};
+		}
+		
+		A.forwardNav {
+			padding: 5px;
+			color: #FFFFFF;
+			background-color: {color:color2};
+			float: right;
+		}
+		
+		A.forwardNav:hover {
+			color: {color:color3};
+		}
+		
+		blockquote { 
+			border-left : 2px solid {color:color3};
+			margin-top: -4px;
+			margin-left: 10px;
+			padding-left: 4px;
+		}
+		
+		#sidebar {
+			text-align: center;
+			margin-top: 125px;
+			float: left;
+			width: 240px;
+			background: #FFFFFF;
+			padding: 5px;
+			box-shadow: 4px 4px {color:color2}; 
+			-moz-box-shadow: 4px 4px {color:color2};
+			-webkit-box-shadow: 4px 4px {color:color2};
+			font-size: 10px;
+		}
+		
+		#wrapper {
+			width: 845px;
+			margin-top: 0px;
+			margin-right: auto;
+			margin-bottom: 0px;
+			margin-left: {text:leftMargin};
+		}
+		
+		div.textPost {
+			float: right;
+			width: 520px;
+			background: #FFFFFF;
+			padding: 5px;
+			box-shadow: 4px 4px {color:color2}; 
+			-moz-box-shadow: 4px 4px {color:color2};
+			-webkit-box-shadow: 4px 4px {color:color2};
+			font-size: 10px;
+			margin-bottom: 15px;
+		}
+		
+		div.nav {
+			float: right;
+			width: 520px;
+			padding: 5px;
+			margin-bottom: 25px;
+			font-size: 10px;
+		}
+		
+		div.postFooter {
+			font-size: 10px;
+			background-color: {color:color3};
+			padding-left: 2px;
+			padding-right: 2px;
+			margin-top: 5px;
+		}
+		
+		div.media {
+			text-align: center;
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+		
+		span.notes {
+			float: right;
+		}
+		
+		::-webkit-scrollbar {
+			width: 10px;
+		}
+		
+		::-webkit-scrollbar-track {
+			background-color: {color:color2};
+		}
+		
+		::-webkit-scrollbar-thumb:vertical {
+			background-color: #FFFFFF;
+		}
+		
+		::-webkit-scrollbar-thumb:horizontal {
+			background-color: #FFFFFF;
+		}
+		
+	</style>
+	<style type="text/css"></style>
+
+</head>
+
+<body>
+	<div id="wrapper">
+
+		<div id="sidebar">
+			{Description} <br /><br />
+			<a href="{text:URL1}">{text:URL1text}</a> | <a href="{text:URL2}">{text:URL2text}</a> | <a href="{text:URL3}">{text:URL3text}</a> | <a href="{text:URL4}">{text:URL4text}</a> | <a href="{text:URL5}">{text:URL5text}</a>
+		</div>
+		
+		<p></p><h1><a class="title" href="/">{Title}</a></h1><p></p>
+		
+		{block:Posts}
+		
+			{block:Text}
+				<div class="textPost">
+				
+					{block:Title}
+						<h2>{title}</h2>
+					{/block:Title}
+					
+					{Body}
+					
+					<div class="postFooter"><a href="{Permalink}">{MonthNumber}.{DayOfMonth}.{Year}</a><span class="notes"><a href="{Permalink}">{NoteCountWithLabel}</a></span><br />
+					{block:HasTags}
+						{block:Tags}
+							<a href="{TagURL}">#{Tag}</a>
+						{/block:Tags}
+					{/block:HasTags}
+					</div>
+					
+					{block:PostNotes}
+						<p><div class="postFooter">
+							{PostNotes}
+						</div></p>
+					{/block:PostNotes}
+				
+				</div>
+			{/block:Text}
+			
+			{block:Photo}
+				<div class="textPost">
+				
+					<div class="media"><img src="{PhotoURL-500}" alt="{PhotoAlt}" /></div>
+				
+					{block:Caption}
+						{Caption}
+					{/block:Caption}
+				
+					<div class="postFooter"><a href="{Permalink}">{MonthNumber}.{DayOfMonth}.{Year}</a><span class="notes"><a href="{Permalink}">{NoteCountWithLabel}</a></span><br />
+					{block:HasTags}
+						{block:Tags}
+							<a href="{TagURL}">#{Tag}</a>
+						{/block:Tags}
+					{/block:HasTags}
+					</div>
+					
+					{block:PostNotes}
+						<p><div class="postFooter">
+							{PostNotes}
+						</div></p>
+					{/block:PostNotes}
+				
+				</div>
+			{/block:Photo}
+			
+			{block:Photoset}
+				<div class="textPost">
+				
+					<p>{Photoset-500}</p>
+					
+					{block:Caption}
+						{Caption}
+					{/block:Caption}
+					
+					<div class="postFooter"><a href="{Permalink}">{MonthNumber}.{DayOfMonth}.{Year}</a><span class="notes"><a href="{Permalink}">{NoteCountWithLabel}</a></span><br />
+					{block:HasTags}
+						{block:Tags}
+							<a href="{TagURL}">#{Tag}</a>
+						{/block:Tags}
+					{/block:HasTags}
+					</div>
+					
+					{block:PostNotes}
+						<p><div class="postFooter">
+							{PostNotes}
+						</div></p>
+					{/block:PostNotes}
+			
+				</div>
+			{/block:Photoset}
+			
+			{block:Quote}
+				<div class="textPost">
+				
+					<p>"{Quote}"</p>
+					
+					{block:Source}
+						- {Source}
+					{/block:Source}
+					
+					<div class="postFooter"><a href="{Permalink}">{MonthNumber}.{DayOfMonth}.{Year}</a><span class="notes"><a href="{Permalink}">{NoteCountWithLabel}</a></span><br />
+					{block:HasTags}
+						{block:Tags}
+							<a href="{TagURL}">#{Tag}</a>
+						{/block:Tags}
+					{/block:HasTags}
+					</div>
+					
+					{block:PostNotes}
+						<p><div class="postFooter">
+							{PostNotes}
+						</div></p>
+					{/block:PostNotes}
+				
+				</div>
+			{/block:Quote}
+			
+			{block:Link}
+				<div class="textPost">
+				
+					<p><a href="{URL}" {Target}>{Name}</a></p>
+					
+					{block:Description}
+						{Description}
+					{/block:Description}
+					
+					<div class="postFooter"><a href="{Permalink}">{MonthNumber}.{DayOfMonth}.{Year}</a><span class="notes"><a href="{Permalink}">{NoteCountWithLabel}</a></span><br />
+					{block:HasTags}
+						{block:Tags}
+							<a href="{TagURL}">#{Tag}</a>
+						{/block:Tags}
+					{/block:HasTags}
+					</div>
+					
+					{block:PostNotes}
+						<p><div class="postFooter">
+							{PostNotes}
+						</div></p>
+					{/block:PostNotes}
+				
+				</div>
+			{/block:Link}
+			
+			{block:Chat}
+				<div class="textPost">
+				
+					{block:Title}
+						<h2>{Title}</h2>
+					{/block:Title}
+					
+					{block:Lines}
+						{block:Label}
+							{Label}
+						{/block:Label}
+						
+						{Line} <br />
+					{/block:Lines}
+					
+					<div class="postFooter"><a href="{Permalink}">{MonthNumber}.{DayOfMonth}.{Year}</a><span class="notes"><a href="{Permalink}">{NoteCountWithLabel}</a></span><br />
+					{block:HasTags}
+						{block:Tags}
+							<a href="{TagURL}">#{Tag}</a>
+						{/block:Tags}
+					{/block:HasTags}
+					</div>
+					
+					{block:PostNotes}
+						<p><div class="postFooter">
+							{PostNotes}
+						</div></p>
+					{/block:PostNotes}
+				
+				</div>
+			{/block:Chat}
+			
+			{block:Video}
+				<div class="textPost">
+				
+					<p>{Video-500}</p>
+					
+					{block:Caption}
+						{Caption}
+					{/block:Caption}
+				
+					<div class="postFooter"><a href="{Permalink}">{MonthNumber}.{DayOfMonth}.{Year}</a><span class="notes"><a href="{Permalink}">{NoteCountWithLabel}</a></span><br />
+					{block:HasTags}
+						{block:Tags}
+							<a href="{TagURL}">#{Tag}</a>
+						{/block:Tags}
+					{/block:HasTags}
+					</div>
+					
+					{block:PostNotes}
+						<p><div class="postFooter">
+							{PostNotes}
+						</div></p>
+					{/block:PostNotes}
+					
+				</div>
+			{/block:Video}
+			
+			{block:Audio}
+				<div class="textPost">
+			
+					<p>{AudioPlayerBlack}</p>
+					
+					{block:Caption}
+						{Caption}
+					{/block:Caption}
+				
+					<div class="postFooter"><a href="{Permalink}">{MonthNumber}.{DayOfMonth}.{Year}</a><span class="notes"><a href="{Permalink}">{NoteCountWithLabel}</a></span><br />
+					{block:HasTags}
+						{block:Tags}
+							<a href="{TagURL}">#{Tag}</a>
+						{/block:Tags}
+					{/block:HasTags}
+					</div>
+					
+					{block:PostNotes}
+						<p><div class="postFooter">
+							{PostNotes}
+						</div></p>
+					{/block:PostNotes}
+				
+				</div>
+			{/block:Audio}
+			
+			{block:Answer}
+				<div class="textPost">
+				
+					<div class="postFooter"><b>{Asker} asked:</b> {Question}</div>
+					
+					{Answer}
+					
+					<div class="postFooter"><a href="{Permalink}">{MonthNumber}.{DayOfMonth}.{Year}</a><span class="notes"><a href="{Permalink}">{NoteCountWithLabel}</a></span><br />
+					{block:HasTags}
+						{block:Tags}
+							<a href="{TagURL}">#{Tag}</a>
+						{/block:Tags}
+					{/block:HasTags}
+					</div>
+					
+					{block:PostNotes}
+						<p><div class="postFooter">
+							{PostNotes}
+						</div></p>
+					{/block:PostNotes}
+				
+				</div>
+			{/block:Answer}
+			
+		{/block:Posts}
+		
+		<p>
+			<div class="nav">
+			{block:PreviousPage}
+				<a class="backNav" href="{PreviousPage}">&#171; Previous</a>
+			{/block:PreviousPage}
+			
+			{block:NextPage}
+				<a class="forwardNav" href="{NextPage}">Next &#187;</a>
+			{/block:NextPage}
+			</div>
+		</p>
+		
+		<br />
+		<br />
+		<br />
+	
+	</div>
+
+
+</body>
+</html>
